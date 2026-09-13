@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Multiple Time Zones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕐 Digital Clock - Time Zones</h1>
+            <p>View current time across multiple time zones</p>
+        </header>
+
+        <div class="controls">
+            <input 
+                type="text" 
+                id="tzInput" 
+                placeholder="Enter timezone (e.g., America/New_York)" 
+                class="tz-input"
+            >
+            <button id="addBtn" class="btn btn-primary">+ Add Timezone</button>
+            <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
+
+        <div class="timezone-grid" id="timezoneGrid">
+            <!-- Clock cards will be inserted here -->
+        </div>
+
+        <div class="timezone-list">
+            <h2>Available Timezones</h2>
+            <div class="search-box">
+                <input type="text" id="searchTz" placeholder="Search timezones...">
+            </div>
+            <ul id="tzList" class="tz-list">
+                <!-- List will be populated by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="timezone-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
